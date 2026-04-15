@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAMuBAMvx0ruB_no7IU3_5or9DN10d_cuk",
+  apiKey: "API_KEY_HERE",
   authDomain: "gen-lang-client-0461420567.firebaseapp.com",
   databaseURL: "https://gen-lang-client-0461420567-default-rtdb.firebaseio.com",
   projectId: "gen-lang-client-0461420567",
