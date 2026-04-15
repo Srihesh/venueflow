@@ -11,7 +11,7 @@ export default function Attendee() {
   const [isTyping, setIsTyping] = useState(false);
   const chatEndRef = useRef(null);
 
-  const [currentZone, setCurrentZone] = useState("North Stand");
+  const currentZone = "North Stand";
 
   useEffect(() => {
     const dataRef = ref(db, 'venueData');
@@ -161,10 +161,11 @@ export default function Attendee() {
               />
               <button 
                 type="submit" 
+                aria-label="Send Message to Vanguard AI"
                 disabled={!input.trim() || isTyping}
                 className="absolute right-2 top-2 bottom-2 w-10 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition-all disabled:opacity-50 flex items-center justify-center shadow-lg"
               >
-                <Send size={16} className="-ml-0.5" />
+                <Send size={16} className="-ml-0.5" aria-hidden="true" />
               </button>
             </form>
           </div>

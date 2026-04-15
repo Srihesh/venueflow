@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const API_KEY = "AIzaSyCPMoqmziogZk1LQ_ZfhJe59LKlPFwm_sI";
 const genAI = new GoogleGenerativeAI(API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 export const getWayfindingResponse = async (question, context) => {
   try {
@@ -29,7 +29,7 @@ Insight:`;
 
     const result = await model.generateContent(prompt);
     return result.response.text();
-  } catch (error) {
+  } catch {
     return "Analyzing incoming crowd telemetry... standing by.";
   }
 };

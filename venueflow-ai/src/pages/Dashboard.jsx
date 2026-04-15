@@ -185,14 +185,14 @@ export default function Dashboard() {
           {/* Director Overrides (Top Right) */}
           <div className="glass-panel p-5 w-[340px] border-t-2 border-t-blue-500">
             <div className="flex items-center gap-3 mb-4">
-               <Cpu className="text-blue-400" size={18} />
+               <Cpu className="text-blue-400" size={18} aria-hidden="true" />
                <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-slate-300">System Overrides</h3>
             </div>
             <div className="flex gap-2">
-               <button onClick={injectHalftimeRush} className="flex-1 bg-red-500/20 hover:bg-red-500/40 border border-red-500/50 text-red-100 text-[10px] font-bold py-2 rounded uppercase tracking-wider transition-all">
+               <button onClick={injectHalftimeRush} aria-label="Simulate Crowd Surge Scenario" className="flex-1 bg-red-500/20 hover:bg-red-500/40 border border-red-500/50 text-red-100 text-[10px] font-bold py-2 rounded uppercase tracking-wider transition-all">
                   Inject Surge
                </button>
-               <button onClick={injectEvacuationClear} className="flex-1 bg-slate-700/50 hover:bg-slate-600 border border-slate-500/50 text-slate-200 text-[10px] font-bold py-2 rounded uppercase tracking-wider transition-all">
+               <button onClick={injectEvacuationClear} aria-label="Simulate Complete Evacuation Scenario" className="flex-1 bg-slate-700/50 hover:bg-slate-600 border border-slate-500/50 text-slate-200 text-[10px] font-bold py-2 rounded uppercase tracking-wider transition-all">
                   Clear Sector
                </button>
             </div>
