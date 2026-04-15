@@ -60,7 +60,7 @@ const MAP_STYLES = [
 
 export default function Dashboard() {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyCM2ghYaey0goO2Zsby_Su6vRN7KFYea1s",
+    googleMapsApiKey: "API-KEY-HERE",
     libraries: LIBRARIES
   });
 
