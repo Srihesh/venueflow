@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-cine-dark: #07090D;
+  --color-cine-surface: rgba(14, 18, 25, 0.65);
+  --color-cine-highlight: #ffffff;
+  --color-cine-accent: #3b82f6;
+  --color-cine-warning: #f59e0b;
+  --color-cine-danger: #ef4444;
+}
+
+@layer base {
+  body {
+    @apply text-slate-200 antialiased overflow-hidden font-sans;
+    margin: 0;
+    background-color: var(--color-cine-dark);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: var(--color-cine-surface);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.4),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+  }
+
+  .glass-nav {
+    background: rgba(7, 9, 13, 0.4);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .cine-text-glow {
+    text-shadow: 0 0 20px rgba(255,255,255,0.4);
+  }
+
+  .accent-glow {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+
+  /* Custom scrollbar for beautiful lists if needed */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
