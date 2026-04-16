@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY = "API_KEY_HERE";
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
@@ -15,7 +15,7 @@ VIP Response:`;
     return result.response.text();
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return `API Error Detected: ${error.message}. Please verify the Gemini API Key in src/gemini.js is valid and not restricted.`;
+    return `API Error Detected: ${error.message}. Please verify the Gemini API Key in your .env file is valid and not restricted.`;
   }
 };
 

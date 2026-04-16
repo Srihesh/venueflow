@@ -1,5 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-const API_KEY = "API_KEY_HERE";
+// Load from .env file when running locally: GEMINI_API_KEY=your_key node test_gemini2.js
+const API_KEY = process.env.GEMINI_API_KEY;
+if (!API_KEY) throw new Error("Missing GEMINI_API_KEY environment variable");
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 async function testModel(modelName) {
