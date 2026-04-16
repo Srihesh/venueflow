@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-const key1 = "AIzaSyCPMoqmziogZk1LQ_ZfhJe59LKlPFwm_sl";
-const key2 = "AIzaSyAMuBAMvx0ruB_no7IU3_5or9DN10d_cuk";
+const key1 = "API_KEY_HERE";
+const key2 = "API_KEY_HERE";
 
 async function testKey(keyName, key) {
   try {
